@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     private void sendSMS(String phoneNumber, String message)
     {
         Log.v("phoneNumber",phoneNumber);
-        Log.v("MEssage",message);
+        Log.v("via ADIsms : ",message);
         PendingIntent pi = PendingIntent.getActivity(this, 0, new Intent(this, ignore.class), 0);
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNumber, null, message, pi, null);
